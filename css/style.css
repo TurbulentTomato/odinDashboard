@@ -196,4 +196,61 @@ nav li {
 
 main {
   grid-area: main;
+  background-color: #cfdbe3;
+  padding: 50px 20px;
+  display: grid;
+  grid-template: 1fr 1fr/ 2fr 1fr;
+  grid-template-areas:
+    "projects announcements"
+    "prpjects trending";
+}
+
+.project-container {
+  grid-area: projects;
+}
+
+.announcement-container {
+  grid-area: announcements;
+}
+
+.trending-container {
+  grid-area: trending;
+}
+
+.projects {
+  display: grid;
+  grid-template: 1fr 1fr 1fr / 1fr 1fr;
+  gap: 20px;
+}
+
+.projects>li {
+  background-color: #fff;
+  border-left: 10px solid orange;
+  border-radius: 1em;
+  display: grid;
+}
+
+article {
+  display: grid;
+  grid-template-areas:
+    "content content"
+    ". quick-actions";
+  padding: 20px 20px 20px 10px;
+  align-content: space-between;
+
+}
+
+.quick-actions {
+  grid-area: quick-actions;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 10px;
+}
+
+.content {
+  grid-area: content;
+}
+
+h2 {
+  margin-bottom: 20px;
 }
